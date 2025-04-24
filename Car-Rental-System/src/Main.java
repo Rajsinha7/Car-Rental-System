@@ -134,6 +134,7 @@ class CarRentalSystem {
     }
 
     public void menu() {
+         @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -183,7 +184,7 @@ class CarRentalSystem {
                     System.out.println("Customer Name: " + newCustomer.getName());
                     System.out.println("Car: " + selectedCar.getBrand() + " " + selectedCar.getModel());
                     System.out.println("Rental Days: " + rentalDays);
-                    System.out.println("Total Price: $%.2f%n"+ totalPrice);
+                    System.out.printf("Total Price: $%.2f%n", totalPrice);
 
                     System.out.print("\nConfirm rental (Y/N): ");
                     String confirm = scanner.nextLine();
